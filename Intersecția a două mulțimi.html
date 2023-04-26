@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Intersecția a două mulțimi</title>
+</head>
+<script>
+function intersect() {
+	
+	var set1 = document.getElementById("set1").value;
+	var set2 = document.getElementById("set2").value;
+        var result = document.getElementById("result").value;
+
+	
+	var list1 = set1.split(",");
+	var list2 = set2.split(",");
+
+	
+	var intersection = list1.filter(function(n) {
+		return list2.indexOf(n) != -1;
+	});
+
+	
+	document.getElementById("result").value = intersection.join(",");
+}
+</script>
+<body>
+	<h1>Introduceti elementele primei multimi:</h1>
+	<input type="text" id="set1">
+	<h1>Introduceti elementele celei de-a doua multimi:</h1>
+	<input type="text" id="set2">
+        <br/><br/>
+	<button onclick="intersect()">Calculează intersecția</button>
+	<h2>Elementele comune din cele două mulțimi:</h2>
+	<input type="text" id="result">
+</body>
+</html>

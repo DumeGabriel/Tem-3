@@ -1,0 +1,44 @@
+<!DOCTYPE htyml>
+  <html>
+  <head>
+    <title>Înmulțirea și Împărțirea a două numere reale</title>
+
+    <script>
+      function calc()
+        {
+          var x = parseInt(document.getElementById('x').value);
+          var y = parseInt(document.getElementById('y').value);
+          var oper = document.getElementById('operatori').value;
+
+          if(oper === '*')
+          {
+            document.getElementById('rezultat').value = x*y;
+          }
+
+          if(oper === '/')
+          {
+            document.getElementById('rezultat').value = x/y;
+          }
+        }
+    </script>
+  </head>
+  <body>
+ 
+  <h1>Înmulțirea și împărtirea a două numere reale</h1>
+
+      <input type="number" class="form-control" placeholder="Adaugă un număr real x" id="x">
+      <br/><br/>
+      <input type="number" class="form-control" placeholder="Adaugă un număr real y" id="y">
+      <br/><br/>
+  
+  <select id="operatori">
+    <option value="*">*</option>
+    <option value="/">/</option>
+  </select>
+  
+      <button class="btn btn-primary" onclick="calc();">=</button>
+      <input type="number" class="form-control" placeholder="Rezultatul" id="rezultat">
+    
+    
+  </body>
+  </html>

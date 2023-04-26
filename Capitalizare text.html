@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>Capitalizare text</title>
+
+    <script>
+       function convertText() 
+        {
+          var inputText = document.getElementById("text").value;
+          var words = inputText.split(" ");
+               for (var i = 0; i < words.length; i++)
+                   {
+                     words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+                   }
+
+          document.getElementById("text").value = words.join(" ");
+        }
+    
+    </script>
+  </head>
+  <body>
+ 
+  <h1>Capitalizare text</h1>
+
+      <input type="text" class="form-control" placeholder="Adauga text" id="text">
+      <br/><br/>
+  
+  
+      <button class="btn btn-primary" onclick="convertText()">Editeaza textul</button>
+      
+   
+  </body>
+  </html>
